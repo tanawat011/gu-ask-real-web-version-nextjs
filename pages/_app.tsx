@@ -2,11 +2,9 @@ import React, { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from '@material-ui/core/styles'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import theme from '../src/theme'
 import Header from '../components/_Header'
 import Footer from '../components/_Footer'
+import 'antd/dist/antd.min.css'
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props
@@ -26,10 +24,7 @@ export default function MyApp(props: AppProps) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Header />
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Component {...pageProps} />
       <Footer />
     </>
   )
