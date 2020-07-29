@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/theme'
-import Navbar from '../components/_Navbar'
+import Header from '../components/_Header'
 import Footer from '../components/_Footer'
 
 export default function MyApp(props: AppProps) {
@@ -25,9 +25,7 @@ export default function MyApp(props: AppProps) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <header>
-        <Navbar />
-      </header>
+      <Header />
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
